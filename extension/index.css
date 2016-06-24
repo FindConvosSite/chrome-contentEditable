@@ -1,0 +1,85 @@
+content-editable-toggle-icon {
+  position: fixed;
+  z-index: 2147483647;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background: rgba(0, 0, 0, .5);
+  height: 130px;
+  width: 130px;
+  border-radius: 20px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+content-editable-toggle-icon:before {
+  content: "✍";
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  position: absolute;
+  font-size: 86px;
+  line-height: 86px;
+  top: 8px;
+  right: 0;
+  left: 0;
+  font-family: sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  text-indent: .03em;
+  text-align: center;
+  color: #fff;
+}
+
+content-editable-toggle-icon:after {
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  position: absolute;
+  font-size: 24px;
+  line-height: 24px;
+  bottom: 17px;
+  right: 0;
+  left: 0;
+  font-family: sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  text-indent: .03em;
+  text-align: center;
+  color: #fff;
+}
+
+html[contenteditable] content-editable-toggle-icon:after {
+  content: "on";
+}
+
+html:not([contenteditable]) content-editable-toggle-icon:after {
+  content: "off";
+}
+
+html[contenteditable] content-editable-toggle-icon {
+  animation: content-editable-toggle-icon-pulse-on 1.3s ease forwards;
+}
+
+html:not([contenteditable]) content-editable-toggle-icon {
+  animation: content-editable-toggle-icon-pulse-off 1.3s ease forwards;
+}
+
+@keyframes content-editable-toggle-icon-pulse-on {
+  0%, 100% {
+    opacity: 0;
+  }
+  5%, 34% {
+    opacity: 1;
+  }
+}
+
+@keyframes content-editable-toggle-icon-pulse-off {
+  0%, 100% {
+    opacity: 0;
+  }
+  5%, 34% {
+    opacity: 1;
+  }
+}

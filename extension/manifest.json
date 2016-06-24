@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "Chrome ContentEditable",
+  "description": "Toggle ContentEditable on a document.",
+  "version": "0.3",
+
+  "permissions": ["storage"],
+
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "css": ["index.css"],
+    "js": ["index.js"],
+    "run_at": "document_start"
+  }]
+}
