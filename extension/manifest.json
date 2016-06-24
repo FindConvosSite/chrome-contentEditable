@@ -3,7 +3,7 @@
 
   "name": "Chrome ContentEditable",
   "description": "Toggle ContentEditable on a document.",
-  "version": "0.3",
+  "version": "1.0",
 
   "permissions": ["storage"],
 
